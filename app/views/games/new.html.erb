@@ -1,0 +1,11 @@
+<h1 class="title">New Game</h1>
+
+<div class="container d-flex flex-row">
+  <% @letters.each do |letter| %>
+    <h3 class="letter"><%= letter %></h3>
+  <% end %>
+</div>
+
+<form action="TODO" method="POST" data-turbo="false">
+  <!-- ... -->
+</form>
