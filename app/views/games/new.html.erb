@@ -1,11 +1,19 @@
 <h1 class="title">New Game</h1>
 
 <div class="container d-flex flex-row">
-  <% @letters.each do |letter| %>
+  <% $letters.each do |letter| %>
     <h3 class="letter"><%= letter %></h3>
   <% end %>
 </div>
 
-<form action="TODO" method="POST" data-turbo="false">
+<form class="d-flex align-middle form" action="/score" method="POST" data-turbo="false">
   <!-- ... -->
+  <label class="align-middle" for="input">What is the longest word you can find?</label>
+  <input class="ml-3 " type="text" id="input" name="answer" placeholder="ex: LIFE"><br><br>
+  <input type="submit" value="Submit">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
 </form>
+
+<div style="margin: 20px">
+  <%= link_to "reset", new_path %>
+</div>

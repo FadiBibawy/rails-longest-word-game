@@ -1,0 +1,31 @@
+<h1 class="title">Result!</h1>
+
+<div class="container">
+  <div class="input card">
+    you entered: <%= @input %>
+  </div>
+  <%= "------" %>
+
+  <div class="grid card">
+    the grid: <%= $letters %>
+  </div>
+
+  <%= "------" %>
+  <div class="message card">
+    <%= @message %>
+  </div>
+
+  <%= "------" %>
+  <div class="time card">
+    you took time: <%= @duration %> seconds!
+  </div>
+  <%= "------" %>
+  <div class="score card">
+    your score: <%= @score %> %
+  </div>
+</div>
+
+<div class="new">
+  <%= link_to "start a new game", new_path %>
+</div>
+<%# <%= link_to "Ask a new question", new_path %>
